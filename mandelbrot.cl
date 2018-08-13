@@ -32,7 +32,7 @@ unsigned char grayvalue(float n) {
 }
 
 // TODO should make iteration count a parameter
-__kernel void mandelbrot(__global unsigned char* output, size_t offset)
+__kernel void mandelbrot(__global unsigned char* output, int offset)
 {
     int k = get_global_id(0);
     int j = get_global_id(1);
