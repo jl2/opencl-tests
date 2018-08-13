@@ -1,7 +1,7 @@
 
 #pragma OPENCL_EXTENSION cl_khr_fp64 : enable
 
-typedef double2 Complex;
+typedef float2 Complex;
 
 Complex multiply(Complex a, Complex b);
 float boundedorbit(Complex seed, Complex c, float bound, int bailout);
