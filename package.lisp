@@ -4,5 +4,6 @@
 
 
 (defpackage #:opencl-tests
-  (:use #:cl)
-  (:export #:show-devices))
+  (:use #:cl #:alexandria)
+  (:export #:show-devices
+           #:mandelbrot-set))
