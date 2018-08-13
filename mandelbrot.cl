@@ -32,13 +32,13 @@ unsigned char grayvalue(float n) {
 }
 
 // TODO should make iteration count a parameter
-__kernel void mandelbrot(__global unsigned char* output, int offset)
-{
+__kernel void mandelbrot(__global unsigned char* output, int width, int height)
+{        
     int k = get_global_id(0);
     int j = get_global_id(1);
     
     // construct position
-    Complex c = (Complex)(-2.5 + 3.5*(k/3500.0), -1.25 + 2.5*((j+offset)/2500.0));
+    Complex c = (Complex)(-2.5 + 3.5*(k/(1.0 * width)), -1.25 + 2.5*(j/(1.0 * height)));
 
     float count = boundedorbit((Complex)(0,0), c, 2.0, 200);
 

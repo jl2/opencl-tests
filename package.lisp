@@ -6,4 +6,5 @@
 (defpackage #:opencl-tests
   (:use #:cl #:alexandria)
   (:export #:show-devices
+           #:test-easy-setup
            #:mandelbrot-set))
